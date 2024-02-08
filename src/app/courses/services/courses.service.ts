@@ -13,7 +13,7 @@ export class CoursesService {
   list(){
     const getCourses = this.httpClient.get<Course[]>(this.baseUrl).pipe(
       first(),
-      delay(3000),
+      delay(1500),
       tap(courses => console.log(courses))
     );
     return getCourses;
